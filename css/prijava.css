@@ -1,0 +1,25 @@
+.prijava{
+    max-width : 35rem;
+    margin: auto;
+    margin-top: 10rem;
+    background: #a2519f;
+    padding: 8rem 4rem;
+}
+
+@media (max-width:576px) {
+    .prijava{
+        padding: 2rem 1rem;
+        border-radius: 2.5rem;
+    }
+}
+
+ .buttlog{
+    width: 8rem;
+    background: rgb(0, 0, 0);
+    margin-top: 1rem;
+ }
+
+ .buttgroup{
+    display: flex;
+    justify-content: space-evenly;
+ }
