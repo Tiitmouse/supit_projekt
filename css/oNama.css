@@ -15,11 +15,11 @@ html::-webkit-scrollbar {
 }
 
 .text-box>div:nth-child(even){
-    background: paleturquoise;
+    background: var(--primary-color);
 }
 
 .text-box>div:nth-child(odd){
-    background: lightseagreen;
+    background: var(--primary-accent-color);
 }
 .onText{
     scroll-snap-align: start;
@@ -56,3 +56,4 @@ footer.onText{
         max-width: 70%;
     }
 }
+

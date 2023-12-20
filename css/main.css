@@ -1,9 +1,33 @@
 :root{
-  --primaryM-color:#BF1F77;
-  --secondaryO-color:#D96725;
-  --algBlack-color: #0D0D0D;
-  --algMagenta-color: #BF3B5E;
-  --algOrange-color: #D94A3D;
+  --primary-color:#c17f8b;
+  --secondary-color:#2a306d;
+  --background-color: #f6f5f6;
+  --primary-accent-color: #dd978f;
+  --secondary-accent-color: #554778;
+  --navbar-color: #9d6c82;
+}
+
+.primary-color{
+  background-color: var(--primary-color) !important;
+}
+
+.secondary-color{
+  background-color: var(--secondary-color) !important;
+}
+
+.primary-accent-color{
+  background-color: var(--primary-accent-color) !important;
+}
+
+.secondary-accent-color{
+  background-color: var(--secondary-accent-color) !important;
+}
+
+.background{
+  background-color: var(--background-color) !important;
+}
+html, body {
+  background-color: var(--background-color);
 }
 
 .logo {
@@ -38,8 +62,12 @@ footer p {
 }
 
 nav {
-  background-color: #bcbaba;
+  background-color: var(--navbar-color);
   margin:0.7rem;
+}
+
+.align-left{
+  margin-left: auto;
 }
 
 .back-arrow{
@@ -59,5 +87,23 @@ nav {
   position: relative;
   overflow: hidden;
 }
+.container-fluid>button.navbar-toggler {
+  border: none;
+  box-shadow: none;
+}
 
-
+@media(max-width: 577px){
+    nav {
+      text-align: center;
+    }
+    .logo{
+      margin-left: 1.3rem;
+    }
+    .align-left{
+      margin: auto 0 auto;
+    }
+    .container-fluid>button.navbar-toggler {
+      margin-right: 1rem;
+    }
+    
+}
