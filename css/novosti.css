@@ -6,3 +6,24 @@
 	width: 125px;
     clip-path: polygon();
 }
+.leftImg {
+	clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+	height: 20rem;
+	width: 390px;
+  }
+.middleImg{
+	clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0% 50%, 25% 0%);
+	height: 20rem;
+	width: auto;
+}
+.rightImg{
+	clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+	height: 20rem;
+	width: 390px;
+}
+.novostList{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 13%;
+}
