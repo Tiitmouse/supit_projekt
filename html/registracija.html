@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prijava</title>
     <link rel="stylesheet" href="../bootstrap-5.3.2-dist/css/bootstrap.css" />
-    <script src="../bootstrap-5.3.2-dist/js/bootstrap.js"></script>
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/prijava.css" />
   </head>
@@ -56,33 +55,33 @@
     </nav>
 
     <div class="prijava round-border">
-      <form method="post" id="regiser-form">
+      <form method="post" id="register-form">
         <div class="form-floating mb-3">
           <input
             type="email"
             class="form-control"
-            id="floatingInput"
+            id="email"
             placeholder="name@example.com"
           />
-          <label for="floatingInput">Username</label>
+          <label for="email">Username</label>
         </div>
         <div class="form-floating">
           <input
             type="password"
             class="form-control"
-            id="floatingPassword"
+            id="password"
             placeholder="Password"
           />
-          <label for="floatingPassword">Password</label>
+          <label for="password">Password</label>
         </div>
         <div class="form-floating">
           <input
             type="password"
             class="form-control"
-            id="floatingPassword"
+            id="password-confirm"
             placeholder="Password"
           />
-          <label for="floatingPassword">Repeat password</label>
+          <label for="password-confirm">Repeat password</label>
         </div>
         <div class="buttgroup">
           <a href="signIn.html">
@@ -92,5 +91,7 @@
         </div>
       </form>
     </div>
+    <script src="../bootstrap-5.3.2-dist/js/bootstrap.js"></script>
+    <script src="../js/register.js"></script>
   </body>
 </html>

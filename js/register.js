@@ -1,5 +1,5 @@
 (() => {
-  const loginForm = document.querySelector("#login-form");
+  const loginForm = document.querySelector("#register-form");
   const email = document.querySelector("#email");
   const password = document.querySelector("#password");
   const passwordConfirm = document.querySelector("#password-confirm");
@@ -10,37 +10,37 @@
   });
 
   function login() {
-    // if (password.value !== passwordConfirm.value)
-    //   return alert("passwords do not match");
+    if (password.value !== passwordConfirm.value) {
+      alert("passwords do not match");
+      return;
+    }
 
     const loginData = {
-    username: email.value,
+      username: email.value,
       password: password.value,
     };
 
-    const response = fetch(
-      "https://www.fulek.com/data/api/user/register",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(loginData),
-      }
-    );
-debugger;
+    const response = fetch("https://www.fulek.com/data/api/user/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(loginData),
+    });
     response.then((result) =>
       result
         .json()
-        .then((data) => {
-          storeTokenSessionStorage(data.token);
-          location.replace("data.html");
+        .then(({isSuccess, errorMessages }) => {
+          debugger;
+          if(isSuccess) {
+            alert("Registration successful");
+            location.replace("../html/prijava.html");
+          }
+          else if (errorMessages.lenght > 0) {
+            alert(errorMessages.join("\n"));
+          }
         })
-        .catch(() => alert("wrong email or password"))
+        .catch(() => alert("registration failed"))
     );
-
-    function storeTokenSessionStorage(token) {
-      sessionStorage.setItem("token", token);
-    }
   }
 })();
