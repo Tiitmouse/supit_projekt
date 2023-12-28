@@ -27,3 +27,12 @@
 	justify-content: center;
 	margin-top: 13%;
 }
+.back-arrow{
+	padding: 0 1rem;
+	position: absolute;
+	text-decoration: none;
+	left: 0px;
+  }
+  .novost h2{
+	margin-left: 2.5rem;
+  }
