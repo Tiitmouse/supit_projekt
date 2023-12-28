@@ -2,7 +2,7 @@
     max-width : 35rem;
     margin: auto;
     margin-top: 10rem;
-    background: var(--primary-color);
+    background: var(--secondary-color);
     padding: 8rem 4rem;
 }
 
@@ -15,7 +15,7 @@
 
  .buttlog{
     width: 8rem;
-    background: var(--secondary-color);
+    background: var(--primary-accent-color);
     margin-top: 1rem;
  }
  .buttlog:hover{

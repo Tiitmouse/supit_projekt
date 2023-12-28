@@ -34,7 +34,7 @@ html::-webkit-scrollbar {
 }
 
 .text-box>div:nth-child(odd){
-    background: var(--primary-accent-color);
+    background: var(--secondary-color);
 }
 .onText{
     scroll-snap-align: start;

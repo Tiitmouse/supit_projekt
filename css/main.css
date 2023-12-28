@@ -1,10 +1,8 @@
 :root {
-  --primary-color: #c17f8b;
-  --secondary-color: #2a306d;
-  --background-color: #f3b1f3;
-  --primary-accent-color: #dd978f;
-  --secondary-accent-color: #554778;
-  --navbar-color: #9d6c82;
+  --primary-color: #3f828e;
+  --secondary-color: #afdcdd;
+  --primary-accent-color: #5caba3;
+  --secondary-accent-color: #c3eded;
 }
 
 .primary-color {
@@ -23,12 +21,9 @@
   background-color: var(--secondary-accent-color) !important;
 }
 
-.background {
-  background-color: var(--background-color) !important;
-}
 html,
 body {
-  background-color: var(--background-color);
+  background-color: var(--primary-color);
 }
 
 .logo {
@@ -63,7 +58,7 @@ footer p {
 }
 
 nav {
-  background-color: var(--navbar-color);
+  background-color: var(--secondary-accent-color);
   margin: 0.7rem;
 }
 
