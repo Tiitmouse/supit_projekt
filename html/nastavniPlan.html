@@ -1,58 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nastavni Plan</title>
-    <link rel="stylesheet" href="../bootstrap-5.3.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../bootstrap-5.3.2-dist/css/bootstrap.css" />
     <script src="../bootstrap-5.3.2-dist/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="../css/main.css">
-</head>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/nastavniPlan.css" />
+  </head>
 
-<body>
-  <nav class="navbar navbar-expand-sm round-border fixed-top">
-    <div class="container-fluid">
-      <img src="../materijali/img/Algebra-logo.png" alt="logo" class="logo" />
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarTogglerDemo02"
-        aria-controls="navbarTogglerDemo02"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav mb-lg-0" style="width: 100%;">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="../index.html"
-              >Pocetna</a
-            >
-          </li>
+  <body>
+    <nav class="navbar navbar-expand-sm round-border fixed-top">
+      <div class="container-fluid">
+        <img src="../materijali/img/Algebra-logo.png" alt="logo" class="logo" />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mb-lg-0" style="width: 100%">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html"
+                >Pocetna</a
+              >
+            </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="oNama.html">O nama</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="novosti.html">Novosti</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="nastavniPlan.html"
-              >Nastavni Plan</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="kontakt.html">Kontakt</a>
-          </li>
-          <li class="nav-item align-left">
+            <li class="nav-item">
+              <a class="nav-link" href="oNama.html">O nama</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="novosti.html">Novosti</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="nastavniPlan.html"
+                >Nastavni Plan</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kontakt.html">Kontakt</a>
+            </li>
+            <li class="nav-item align-left">
               <a class="nav-link" href="prijava.html">Prijava</a>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div>
+      <h1>Nastavni plan</h1>
+      <hr />
+    </div>
+    <div class="nastavniPlanContent">
+      <div class="searchBar">
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="floatingInput"
+            placeholder="kolegijSearch"
+          />
+          <label for="floatingInput" class="faintInputText"
+            >Naziv kolegija</label
+          >
+        </div>
+      </div>
+      <div class="kolegijTable">
+        <table class="ForestTable">
+          <thead>
+          <tr>
+          <th>Kolegij</th>
+          <th>ECTS</th>
+          <th>Sati</th>
+          <th>Predavanja</th>
+          <th>Vjezbe</th>
+          <th>Tip</th>
+          <th></th>
+          </tr>
+          </thead>
+          <tfoot>
+          <tr>
+          <td>Ukupno</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td></td>
+          <td></td>
+          </tr>
+          </tfoot>
+          <tbody>
+          <tr>
+          <td>cell1_1</td><td>cell2_1</td><td>cell3_1</td><td>cell4_1</td><td>cell5_1</td><td>cell6_1</td><td>cell7_1</td></tr>
+          </tbody>
+          </tr>
+          </table>
       </div>
     </div>
-  </nav>
-    
-</body>
+  </body>
 </html>

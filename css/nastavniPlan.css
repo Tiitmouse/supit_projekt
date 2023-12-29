@@ -1,0 +1,60 @@
+h1 {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+hr {
+  width: 60%;
+  margin: auto;
+  margin-bottom: 2rem;
+  border-width: 4px;
+  border-color: #c3eded;
+}
+
+.faintInputText {
+  opacity: 0.4;
+}
+
+.searchBar {
+  width: 20rem;
+}
+
+.kolegijTable {
+  width: 40rem;
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
+
+table.ForestTable {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.ForestTable td,
+table.ForestTable th {
+  padding: 3px 2px;
+}
+table.ForestTable tbody td {
+  font-size: 20px;
+  color: #000000;
+}
+table.ForestTable thead {
+  background: #afdcdd;
+  border-bottom: 3px solid #3f828e;
+}
+table.ForestTable thead th {
+  font-size: 20px;
+  font-weight: bold;
+  color: #3f828e;
+  text-align: center;
+}
+table.ForestTable tfoot {
+  font-size: 20px;
+  font-weight: bold;
+  color: #3f828e;
+  background: #afdcdd;
+  border-top: 3px solid #3f828e;
+}
+table.ForestTable tfoot td {
+  font-size: 20px;
+}
