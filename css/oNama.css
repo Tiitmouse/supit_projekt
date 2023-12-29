@@ -30,11 +30,11 @@ html::-webkit-scrollbar {
 }
 
 .text-box>div:nth-child(even){
-    background: var(--primary-color);
+    background: var(--secondary-color);
 }
 
 .text-box>div:nth-child(odd){
-    background: var(--secondary-color);
+    background: var(--primary-color);
 }
 .onText{
     scroll-snap-align: start;
