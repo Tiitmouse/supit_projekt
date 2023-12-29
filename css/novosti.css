@@ -1,38 +1,53 @@
-.leftShape{
-    border-bottom: 50px solid #3dc1df;
-	border-left: 25px solid transparent;
-	border-right: 25px solid transparent;
-	height: 0;
-	width: 125px;
-    clip-path: polygon();
+.leftShape {
+  border-bottom: 50px solid #3dc1df;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  height: 0;
+  width: 125px;
+  clip-path: polygon();
 }
 .leftImg {
-	clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
-	height: 20rem;
-	width: 390px;
-  }
-.middleImg{
-	clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0% 50%, 25% 0%);
-	height: 20rem;
-	width: auto;
+  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+  height: 20rem;
+  width: 390px;
 }
-.rightImg{
-	clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
-	height: 20rem;
-	width: 390px;
+.middleImg {
+  clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0% 50%, 25% 0%);
+  height: 20rem;
+  width: 390;
 }
-.novostList{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	margin-top: 13%;
+.rightImg {
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+  height: 20rem;
+  width: 390px;
 }
-.back-arrow{
-	padding: 0 1rem;
-	position: absolute;
-	text-decoration: none;
-	left: 0px;
+.novostList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 13%;
+}
+.back-arrow {
+  padding: 0 1rem;
+  position: absolute;
+  text-decoration: none;
+  left: 0px;
+}
+.novost h2 {
+  margin-left: 2.5rem;
+}
+
+@media (max-width: 1215px) {
+  .novostList {
+    flex-direction: column;
   }
-  .novost h2{
-	margin-left: 2.5rem;
+  .leftImg {
+    clip-path: polygon(100% 25%, 100% 100%, 50% 75%, 0 100%, 0 25%, 50% 0);
   }
+  .middleImg {
+    clip-path: polygon(100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%, 50% 0);
+  }
+  .rightImg {
+    clip-path: polygon(100% 0%, 100% 75%, 50% 100%, 0 75%, 0 0, 50% 25%);
+  }
+}

@@ -81,3 +81,9 @@ footer.onText{
     }
 }
 
+
+@media (max-width: 1024px) {
+    .nastavniPlanContent {
+        flex-direction: column;
+    }
+}

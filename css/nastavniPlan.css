@@ -11,6 +11,13 @@ hr {
   border-color: #c3eded;
 }
 
+.nastavniPlanContent {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+}
+
 .faintInputText {
   opacity: 0.4;
 }
@@ -57,4 +64,10 @@ table.ForestTable tfoot {
 }
 table.ForestTable tfoot td {
   font-size: 20px;
+}
+
+@media (max-width: 1024px) {
+    .nastavniPlanContent {
+        flex-direction: column;
+    }
 }
