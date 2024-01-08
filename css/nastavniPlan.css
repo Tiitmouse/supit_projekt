@@ -23,12 +23,20 @@ hr {
 }
 
 .searchBar {
-  width: 20rem;
+    display: flex;
+  gap: 1rem;
+  max-width: 20rem;
 }
 
 .kolegijTable {
   width: 40rem;
   overflow: hidden;
+  border-radius: 1.5rem;
+}
+#floatingInputautocomplete-list {
+  padding: 1rem;
+  background: var(--secondary-accent-color);
+  position: absolute;
   border-radius: 1.5rem;
 }
 
@@ -67,7 +75,7 @@ table.ForestTable tfoot td {
 }
 
 @media (max-width: 1024px) {
-    .nastavniPlanContent {
-        flex-direction: column;
-    }
+  .nastavniPlanContent {
+    flex-direction: column;
+  }
 }

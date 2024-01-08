@@ -40,7 +40,7 @@
               <a class="nav-link" href="novosti.html">Novosti</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="nastavniPlan.html"
+              <a class="nav-link active" href="nastavniPlan.html" id="nastavniPlanLink"
                 >Nastavni Plan</a
               >
             </li>
@@ -60,7 +60,7 @@
     </div>
     <div class="nastavniPlanContent">
       <div class="searchBar">
-        <div class="form-floating mb-3">
+        <div class="form-floating">
           <input
             type="text"
             class="form-control"
@@ -71,9 +71,10 @@
             >Naziv kolegija</label
           >
         </div>
+        <button id="DodajButton" class="btn btn-primary" type="submit">Dodaj Kolegij</button>
       </div>
       <div class="kolegijTable">
-        <table class="ForestTable">
+        <table id="kolegijTable" class="ForestTable">
           <thead>
           <tr>
           <th>Kolegij</th>
@@ -96,13 +97,11 @@
           <td></td>
           </tr>
           </tfoot>
-          <tbody>
-          <tr>
-          <td>cell1_1</td><td>cell2_1</td><td>cell3_1</td><td>cell4_1</td><td>cell5_1</td><td>cell6_1</td><td>cell7_1</td></tr>
-          </tbody>
           </tr>
           </table>
       </div>
     </div>
   </body>
+  <script src="../js/nastavniPlan.js"></script>
+  <script src="../js/main.js"></script>
 </html>
