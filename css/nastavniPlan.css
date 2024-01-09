@@ -4,7 +4,7 @@ h1 {
 }
 
 hr {
-  width: 60%;
+  width: 70%;
   margin: auto;
   margin-bottom: 2rem;
   border-width: 4px;
@@ -23,7 +23,7 @@ hr {
 }
 
 .searchBar {
-    display: flex;
+  display: flex;
   gap: 1rem;
   max-width: 20rem;
 }
@@ -49,9 +49,9 @@ table.ForestTable td,
 table.ForestTable th {
   padding: 3px 2px;
 }
-table.ForestTable tbody td {
+table.ForestTable > tr >  td {
   font-size: 20px;
-  color: #000000;
+  color: #ffffff;
 }
 table.ForestTable thead {
   background: #afdcdd;

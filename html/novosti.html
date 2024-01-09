@@ -1,65 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Novosti</title>
-    <link rel="stylesheet" href="../bootstrap-5.3.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../bootstrap-5.3.2-dist/css/bootstrap.css" />
     <script src="../bootstrap-5.3.2-dist/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/novosti.css">
-</head>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/novosti.css" />
+  </head>
 
-<body>
-  <nav class="navbar navbar-expand-sm round-border sticky-top">
-    <div class="container-fluid">
-      <img src="../materijali/img/Algebra-logo.png" alt="logo" class="logo" />
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarTogglerDemo02"
-        aria-controls="navbarTogglerDemo02"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav mb-lg-0" style="width: 100%;">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="../index.html"
-              >Pocetna</a
-            >
-          </li>
+  <body>
+    <nav class="navbar navbar-expand-sm round-border sticky-top">
+      <div class="container-fluid">
+        <img src="../materijali/img/Algebra-logo.png" alt="logo" class="logo" />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mb-lg-0" style="width: 100%">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html"
+                >Pocetna</a
+              >
+            </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="oNama.html">O nama</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="novosti.html">Novosti</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="nastavniPlan.html" id="nastavniPlanLink"
-              >Nastavni Plan</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="kontakt.html">Kontakt</a>
-          </li>
-          <li class="nav-item align-left" id="prijavaStatus">
+            <li class="nav-item">
+              <a class="nav-link" href="oNama.html">O nama</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="novosti.html">Novosti</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="nastavniPlan.html" id="nastavniPlanLink"
+                >Nastavni Plan</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kontakt.html">Kontakt</a>
+            </li>
+            <li class="nav-item align-left" id="prijavaStatus">
               <a class="nav-link" href="prijava.html">Prijava</a>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
       </div>
+    </nav>
+    <div class="novostList">
+      <div class="container">
+        <a href="novost1.html"
+          ><img
+            class="leftImg novostListItem image"
+            src="../materijali/img/novost1Cut.png"
+            alt="novost1cut"
+          />
+          <div class="middlel">
+            <div class="text">WorldSkills Kazan 2019</div>
+          </div>
+        </a>
+      </div>
+      <div class="container">
+        <a href="novost2.html"
+          ><img
+            class="middleImg novostListItem image"
+            src="../materijali/img/novost2cut.jpg"
+            alt="novost2cut"
+          />
+          <div class="middlem">
+            <div class="text">Stipendijski natječaj</div>
+          </div>
+        </a>
+      </div>
+      <div class="container">
+      <a href="novost3.html"
+        ><img
+          class="rightImg novostListItem image"
+          src="../materijali/img/novost3cut.jpg"
+          alt="novost3cut"
+      />
+      <div class="middler">
+        <div class="text">Digitalna radionica</div>
+      </div>
+    </a>
     </div>
-  </nav>
-  <div class="novostList">
-      <a href="novost1.html"><img class="leftImg novostListItem" src="../materijali/img/novost1Cut.png" alt="novost1cut"></a>
-      <a href="novost2.html"><img class="middleImg novostListItem" src="../materijali/img/novost2cut.jpg" alt="novost2cut"></a>
-      <a href="novost3.html"><img class="rightImg novostListItem" src="../materijali/img/novost3cut.jpg" alt="novost3cut"></a>
-      <script src="../js/main.js"></script>
-    </body>
-
+    </div>
+    <script src="../js/main.js"></script>
+  </body>
 </html>
