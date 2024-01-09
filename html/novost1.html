@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../bootstrap-5.3.2-dist/css/bootstrap.css" />
     <script src="../bootstrap-5.3.2-dist/js/bootstrap.js"></script>
     <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/novosti.css" />
   </head>
 
   <body>
@@ -25,7 +26,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav mb-lg-0" style="width: 100%;">
+          <ul class="navbar-nav mb-lg-0" style="width: 100%">
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="../index.html"
                 >Pocetna</a
@@ -47,17 +48,18 @@
               <a class="nav-link" href="kontakt.html">Kontakt</a>
             </li>
             <li class="nav-item align-left" id="prijavaStatus">
-                <a class="nav-link" href="prijava.html">Prijava</a>
+              <a class="nav-link" href="prijava.html">Prijava</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-      <a class="back-arrow" href="novosti.html">
-        <h2>&#10094;</h2>
-      </a>
+    <h2>
+      <a class="back-arrow" href="novosti.html"> &#10094; </a>
+    </h2>
+
     <div class="novost">
-      <h2>WorldSkills Kazan 2019 </h2>
+      <h2>WorldSkills Kazan 2019</h2>
       <p>
         Nakon godinu dana priprema za natjecanje WorldSkills Kazan 2019 na kojem
         je sudjelovalo 1300 natjecatelja iz cijelog svijeta, trud se itekako
@@ -72,8 +74,77 @@
         i mentoru voditelju katedre za programsko inženjerstvo - Goranu Đambiću
         na osvojenom 16.mjestu u vještini IT Software Solutions for Business.
       </p>
-      <img src="../materijali/img/novost1.jpg" alt="Novost1" />
     </div>
+    <!-- bog mi pomogo: image/galery stuff -->
+    <!-- Images used to open the lightbox -->
+    <div class="row">
+      <div class="column">
+        <img
+        src="../materijali/img/galerija1.jpg"
+          onclick="openModal();currentSlide(1)"
+          class="hover-shadow"
+        />
+      </div>
+      <div class="column">
+        <img
+        src="../materijali/img/galerija2.jpg"
+          onclick="openModal();currentSlide(2)"
+          class="hover-shadow"
+        />
+      </div>
+    </div>
+
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <div class="mySlides">
+          <div class="numbertext">1 / 1</div>
+          <img src="../materijali/img/galerija1.jpg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 2</div>
+          <img src="../materijali/img/galerija2.jpg" style="width: 100%" />
+        </div>
+
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Caption text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <!-- Thumbnail image controls -->
+        <div class="column">
+          <img
+            class="demo"
+            src="../materijali/img/galerija1.jpg"
+            onclick="currentSlide(1)"
+            alt="Nature"
+          />
+        </div>
+
+        <div class="column">
+          <img
+            class="demo"
+            src="../materijali/img/galerija2.jpg"
+            onclick="currentSlide(2)"
+            alt="Snow"
+          />
+        </div>
+      </div>
+    </div>
+     <!-- bog mi pomogo: image/galery stuff -->
+    <!-- <div>
+      <video width="320" height="240" controls>
+        <source src="../materijali/video/worldskills.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div> -->
     <script src="../js/main.js"></script>
+    <script src="../js/novost1.js"></script>
   </body>
 </html>
