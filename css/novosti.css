@@ -1,4 +1,6 @@
-/* .leftShape {
+/* 
+vrlo vjerojatno ne treba ovaj kod
+.leftShape {
   border-bottom: 50px solid #3dc1df;
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
@@ -6,6 +8,7 @@
   width: 125px;
   clip-path: polygon();
 } */
+/* image shape thingy  */
 .leftImg {
   clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
   height: 20rem;
@@ -60,7 +63,7 @@
   backface-visibility: hidden;
 }
 
-.middlel, .middlem, .middler {
+.middle{
   transition: .5s ease;
   opacity: 0;
   position: absolute;
@@ -69,19 +72,16 @@
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+  
 }
 /* TODO fix apearing */
-/* .middlel {
-  position: absolute;
-  top: 50%;
+.middlel {
   left: 40%;
-}
-.middlem {
-  left: 50%;
 }
 .middler {
   left: 60%;
-} */
+  width: 50%;
+} 
 
 .container:hover .image {
   opacity: 0.3;
@@ -96,6 +96,7 @@
   color: rgb(0, 0, 0);
   font-size: 16px;
   padding: 16px 32px;
+  border-radius: 2rem;
 }
 /* img effect stuff */
 
