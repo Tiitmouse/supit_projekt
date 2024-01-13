@@ -100,7 +100,10 @@ vrlo vjerojatno ne treba ovaj kod
 }
 /* img effect stuff */
 
-/*  <!-- bog mi pomogo: image/galery stuff --> */
+
+
+
+/* gallery stuff */
 .row > .column {
   padding: 0 8px;
 }
@@ -122,13 +125,13 @@ vrlo vjerojatno ne treba ovaj kod
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 100px;
+  margin-top: 5rem;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: black;
+  background-color: var(--primary-color)
 }
 
 /* Modal Content */
@@ -226,7 +229,18 @@ img.hover-shadow {
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-/*  <!-- bog mi pomogo: image/galery stuff --> */
+
+.galleryimg{
+  width: 100%;
+  height: auto;
+}
+
+/* gallery stuff */
+
+
+
+
+
 
 @media (max-width: 1215px) {
   .novostList {
