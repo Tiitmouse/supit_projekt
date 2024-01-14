@@ -43,7 +43,9 @@ footer {
 footer p {
   font-size: 3rem;
 }
-
+a {
+  text-decoration: none;
+}
 .centered-text {
   position: absolute;
   top: 50%;

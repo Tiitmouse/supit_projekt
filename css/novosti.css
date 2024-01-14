@@ -1,5 +1,5 @@
 /* 
-vrlo vjerojatno ne treba ovaj kod
+vrlo vjerojatno ne treba ovaj kod ali neka za svaki slucaj 
 .leftShape {
   border-bottom: 50px solid #3dc1df;
   border-left: 25px solid transparent;
@@ -74,7 +74,6 @@ vrlo vjerojatno ne treba ovaj kod
   text-align: center;
   
 }
-/* TODO fix apearing */
 .middlel {
   left: 40%;
 }
@@ -224,6 +223,7 @@ img.demo {
 
 img.hover-shadow {
   transition: 0.3s;
+  border-radius: 3rem;
 }
 
 .hover-shadow:hover {
@@ -237,7 +237,22 @@ img.hover-shadow {
 
 /* gallery stuff */
 
+/* bonus */
+.previewImg{
+  margin-left: 2%;
+  margin-right: 13%;
+  margin-top: -12rem;
+  scale: 0.3;
+  border-radius: 2rem;
 
+}
+/* TODO vjv postoji puno bolji nacin nego negativni margin i fix center position*/
+.videoPosition{
+  margin-top: -12rem;
+  margin-left: 35%;
+  border-radius: 3rem;
+}
+/* bonus */
 
 
 
@@ -254,5 +269,9 @@ img.hover-shadow {
   }
   .rightImg {
     clip-path: polygon(100% 0%, 100% 75%, 50% 100%, 0 75%, 0 0, 50% 25%);
+  }
+  .middlel, .middler{
+    left: 50%;
+    width: 60%;
   }
 }
