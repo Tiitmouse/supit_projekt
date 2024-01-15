@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kontakt</title>
     <link rel="stylesheet" href="../bootstrap-5.3.2-dist/css/bootstrap.css" />
-    <script src="../bootstrap-5.3.2-dist/js/bootstrap.js" />
+    <script src="../bootstrap-5.3.2-dist/js/bootstrap.js"></script>
     <link rel="stylesheet" href="../css/main.css" />
+
   </head>
 
   <body>
@@ -57,6 +58,39 @@
         </div>
       </div>
     </nav>
-    <script src="../js/main.js"></script>
+
+    <form action="" method="post">
+      <p>
+        <label for="fullName">full name</label>
+        <input type="text" name="fullName" id="fullName" />
+      </p>
+      <p>
+        <label for="email">email</label>
+        <input type="email" name="email" id="email" required />
+      </p>
+      <p>
+        <label for="importance">importance</label>
+        <select name="importance" id="importance">
+          <option value="low">low</option>
+          <option value="medium">medium</option>
+          <option value="high">high</option>
+        </select>
+      </p>
+      <p>
+        <label for="revieveNewsletter">revieve Newsletter</label>
+        <input
+          type="checkbox"
+          name="revieveNewsletter"
+          id="revieveNewsletter"
+          value="true"
+        />
+      </p>
+      <p>
+        <label for="message">message</label>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+      </p>
+    </form>
+
+
   </body>
 </html>
