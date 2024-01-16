@@ -47,7 +47,7 @@ table.ForestTable {
 }
 table.ForestTable td,
 table.ForestTable th {
-  padding: 3px 2px;
+  padding: 2px 6px;
 }
 table.ForestTable > tr >  td {
   font-size: 20px;
@@ -76,6 +76,6 @@ table.ForestTable tfoot td {
 
 @media (max-width: 1024px) {
   .nastavniPlanContent {
-    flex-direction: column;
+    flex-direction: column; 
   }
 }
