@@ -1,4 +1,8 @@
-.prijava{
+.label{
+    opacity: 0.8;
+}
+
+.kontaktform{
     max-width : 35rem;
     margin: auto;
     margin-top: 10rem;
@@ -20,9 +24,4 @@
  }
  .buttlog:hover{
     background: var(--secondary-accent-color);
- }
-
- .buttgroup{
-    display: flex;
-    justify-content: space-evenly;
  }

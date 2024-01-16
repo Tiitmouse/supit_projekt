@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="../bootstrap-5.3.2-dist/css/bootstrap.css" />
     <script src="../bootstrap-5.3.2-dist/js/bootstrap.js"></script>
     <link rel="stylesheet" href="../css/main.css" />
-
+    <link rel="stylesheet" href="../css/kontakt.css" />
+    <link rel="stylesheet" href="../css/prijava.css" />
   </head>
 
   <body>
@@ -59,38 +60,68 @@
       </div>
     </nav>
 
-    <form action="" method="post">
-      <p>
-        <label for="fullName">full name</label>
-        <input type="text" name="fullName" id="fullName" />
-      </p>
-      <p>
-        <label for="email">email</label>
-        <input type="email" name="email" id="email" required />
-      </p>
-      <p>
-        <label for="importance">importance</label>
-        <select name="importance" id="importance">
-          <option value="low">low</option>
-          <option value="medium">medium</option>
-          <option value="high">high</option>
-        </select>
-      </p>
-      <p>
-        <label for="revieveNewsletter">revieve Newsletter</label>
-        <input
-          type="checkbox"
-          name="revieveNewsletter"
-          id="revieveNewsletter"
-          value="true"
-        />
-      </p>
-      <p>
-        <label for="message">message</label>
-        <textarea name="message" id="message" cols="30" rows="10"></textarea>
-      </p>
-    </form>
+    <div class="kontaktform round-border">
+      <form
+        action="https://www.fulek.com/mvc/supit/project-contact-form"
+        method="post"
+      >
+        <div class="form-floating mb-3">
+          <input
+            class="form-control"
+            type="text"
+            name="fullName"
+            id="fullName"
+            placeholder="full name&#0042;"
+            required
+          />
+          <label for="text">full name&#0042;</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            class="form-control"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="email&#0042;"
+            required
+          />
+          <label for="email">email&#0042;</label>
+        </div>
+        <div>
+          <div>
+            <label for="importance">importance</label>
+            <select name="importance" id="importance">
+              <option value="low">low</option>
+              <option value="medium">medium</option>
+              <option value="high">high</option>
+            </select>
+          </div>
+          <div>
+            <label for="recieveNewsletter">recieve Newsletter</label>
+            <input
+              type="checkbox"
+              name="revieveNewsletter"
+              id="revieveNewsletter"
+              value="true"
+            />
+          </div>
+        </div>
+        <div class="form-floating">
+          <textarea
+            class="form-control"
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="message"
+          ></textarea>
+          <label for="message">message</label>
+        </div>
 
-
+        <div class="buttgroup">
+          <button type="submit" class="buttlog btn">posalji</button>
+        </div>
+      </form>
+    </div>
   </body>
 </html>

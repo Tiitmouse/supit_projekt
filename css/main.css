@@ -53,6 +53,8 @@ a {
   transform: translate(-50%, -50%);
   width: max-content;
   text-align: center;
+  background: rebeccapurple;
+
 }
 
 .round-border {
