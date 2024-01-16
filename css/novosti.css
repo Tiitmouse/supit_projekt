@@ -254,7 +254,13 @@ img.hover-shadow {
 }
 /* bonus */
 
-
+.novostiSlika{
+ scale: 0.7;
+ border-radius: 2rem;
+ margin-left: -15rem;
+ margin-top: -5rem;
+/* TODO fix this */
+}
 
 
 @media (max-width: 1215px) {
