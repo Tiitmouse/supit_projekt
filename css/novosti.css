@@ -42,13 +42,12 @@ vrlo vjerojatno ne treba ovaj kod ali neka za svaki slucaj
   margin-left: 2.5rem;
 }
 
-.novost p{
+.novost p {
   margin: 2rem;
   padding: 1rem;
   background-color: var(--secondary-color);
   border-radius: 2rem;
 }
-
 
 /* img effect stuff */
 .container {
@@ -59,12 +58,12 @@ vrlo vjerojatno ne treba ovaj kod ali neka za svaki slucaj
 .image {
   opacity: 1;
   display: block;
-  transition: .5s ease;
+  transition: 0.5s ease;
   backface-visibility: hidden;
 }
 
-.middle{
-  transition: .5s ease;
+.middle {
+  transition: 0.5s ease;
   opacity: 0;
   position: absolute;
   top: 50%;
@@ -72,7 +71,6 @@ vrlo vjerojatno ne treba ovaj kod ali neka za svaki slucaj
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
-  
 }
 .middlel {
   left: 40%;
@@ -80,7 +78,7 @@ vrlo vjerojatno ne treba ovaj kod ali neka za svaki slucaj
 .middler {
   left: 60%;
   width: 50%;
-} 
+}
 
 .container:hover .image {
   opacity: 0.3;
@@ -98,9 +96,6 @@ vrlo vjerojatno ne treba ovaj kod ali neka za svaki slucaj
   border-radius: 2rem;
 }
 /* img effect stuff */
-
-
-
 
 /* gallery stuff */
 .row > .column {
@@ -130,7 +125,7 @@ vrlo vjerojatno ne treba ovaj kod ali neka za svaki slucaj
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: var(--primary-color)
+  background-color: var(--primary-color);
 }
 
 /* Modal Content */
@@ -230,7 +225,7 @@ img.hover-shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.galleryimg{
+.galleryimg {
   width: 100%;
   height: auto;
 }
@@ -238,30 +233,28 @@ img.hover-shadow {
 /* gallery stuff */
 
 /* bonus */
-.previewImg{
+.previewImg {
   margin-left: 2%;
   margin-right: 13%;
   margin-top: -12rem;
   scale: 0.3;
   border-radius: 2rem;
-
 }
 /* TODO vjv postoji puno bolji nacin nego negativni margin i fix center position*/
-.videoPosition{
+.videoPosition {
   margin-top: -12rem;
   margin-left: 35%;
   border-radius: 3rem;
 }
 /* bonus */
 
-.novostiSlika{
- scale: 0.7;
- border-radius: 2rem;
- margin-left: -15rem;
- margin-top: -5rem;
-/* TODO fix this */
+.novostiSlika {
+  max-width: 100%;
+  overflow-x: hidden;
+  scale: 0.95;
+  border-radius: 2rem;
+  /* TODO fix this for phone*/
 }
-
 
 @media (max-width: 1215px) {
   .novostList {
@@ -276,8 +269,18 @@ img.hover-shadow {
   .rightImg {
     clip-path: polygon(100% 0%, 100% 75%, 50% 100%, 0 75%, 0 0, 50% 25%);
   }
-  .middlel, .middler{
+  .middlel,
+  .middler {
     left: 50%;
     width: 60%;
   }
 }
+
+.dot {
+  height: 5rem;
+  width: 5rem;
+  background-color: #B99AB7;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+} 

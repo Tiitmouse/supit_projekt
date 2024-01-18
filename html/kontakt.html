@@ -83,19 +83,20 @@
           />
           <label for="email">email&#0042;</label>
         </div>
-        <div>
-          <div>
+        <div class="choiceThings mb-3">
+          <div class="importance">
             <label for="importance">importance</label>
-            <select name="importance" id="importance">
+            <select class="form-select" name="importance" id="importance" style="margin-left: 1rem;">
               <option value="low">low</option>
               <option value="medium">medium</option>
               <option value="high">high</option>
             </select>
           </div>
           <div>
-            <label for="recieveNewsletter">subscribe</label>
+            <label for="recieveNewsletter" class="form-label">subscribe</label>
             <input
               type="checkbox"
+              class="form-check-input"
               name="revieveNewsletter"
               id="revieveNewsletter"
               value="true"
@@ -115,7 +116,7 @@
         </div>
 
         <div class="buttgroup">
-          <button type="submit" class="buttlog btn">posalji</button>
+          <button type="submit" class="buttlog btn">send</button>
         </div>
       </form>
     </div>

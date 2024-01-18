@@ -2,10 +2,18 @@
 .kontaktform{
     max-width : 35rem;
     margin: auto;
-    margin-top: 10rem;
+    margin-top: 6rem;
     background: var(--secondary-color);
     padding: 8rem 4rem;
 }
+.choiceThings{
+    display: flex;
+    justify-content: space-evenly;
+}
+.importance{
+    display: flex;
+}
+
 
 @media (max-width:576px) {
     .kontaktform{
