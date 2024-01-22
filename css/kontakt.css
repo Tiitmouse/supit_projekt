@@ -32,3 +32,19 @@
  .buttlog:hover{
     background: var(--secondary-accent-color);
  }
+
+ /* kruzic za kontakt */
+ .dot {
+    height: 5rem;
+    width: 5rem;
+    background-color: var(--secondary-accent-color);
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    outline-width: 0.2rem;
+    outline-style: dotted;
+    outline-color: var(--primary-accent-color);
+    position: fixed;
+    bottom: 1.4rem;
+    right: 1.4rem;
+  } 

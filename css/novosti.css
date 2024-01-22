@@ -276,11 +276,3 @@ img.hover-shadow {
   }
 }
 
-.dot {
-  height: 5rem;
-  width: 5rem;
-  background-color: #B99AB7;
-  border-radius: 50%;
-  display: inline-block;
-  position: absolute;
-} 

@@ -8,6 +8,7 @@
     <script src="../bootstrap-5.3.2-dist/js/bootstrap.js"></script>
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/novosti.css" />
+    <link rel="stylesheet" href="../css/kontakt.css">
   </head>
 
   <body>
@@ -76,50 +77,57 @@
       </p>
     </div>
 
-
-    
-
     <!-- gallery stuff -->
-     <!-- Images used to open the lightbox -->
-<div class="row">
-  <div class="column previewImg">
-    <img src="../materijali/img/galerija1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
-  </div> 
-  <div class="column previewImg">
-    <img src="../materijali/img/galerija2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
-  </div>
-</div>
-
-<!-- The Modal/Lightbox -->
-<div id="myModal" class="modal">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
-  <div class="modal-content">
-
-    <div class="mySlides">
-      <div class="numbertext">1 / 2</div>
-      <img class="galleryimg" src="../materijali/img/galerija1.jpg">
+    <!-- Images used to open the lightbox -->
+    <div class="row">
+      <div class="column previewImg">
+        <img
+          src="../materijali/img/galerija1.jpg"
+          onclick="openModal();currentSlide(1)"
+          class="hover-shadow"
+        />
+      </div>
+      <div class="column previewImg">
+        <img
+          src="../materijali/img/galerija2.jpg"
+          onclick="openModal();currentSlide(2)"
+          class="hover-shadow"
+        />
+      </div>
     </div>
 
-    <div class="mySlides">
-      <div class="numbertext">2 / 2</div>
-      <img class="galleryimg" src="../materijali/img/galerija2.jpg">
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <div class="mySlides">
+          <div class="numbertext">1 / 2</div>
+          <img class="galleryimg" src="../materijali/img/galerija1.jpg" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 2</div>
+          <img class="galleryimg" src="../materijali/img/galerija2.jpg" />
+        </div>
+
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
     </div>
-
-    <!-- Next/previous controls -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-
-  </div>
-</div> 
     <!-- gallery stuff -->
     <div class="video videoPosition">
-      <video width="320" height="240" style="border-radius: 1rem;" controls>
-        <source src="../materijali/video/worldskills.mp4" type="video/mp4"/> <!--TODO transfer styling stuff into css-->
-        Video can't be loaded for some reason :( and I don't know why :( it is a mystery :( seems like it is not a video file :(
+      <video width="320" height="240" style="border-radius: 1rem" controls>
+        <source src="../materijali/video/worldskills.mp4" type="video/mp4" />
+        <!--TODO transfer styling stuff into css-->
+        Video can't be loaded for some reason :( and I don't know why :( it is a
+        mystery :( seems like it is not a video file :(
       </video>
-    </div> 
-
+    </div>
+     <!-- kontakt kruzic -->
+     <div id="kruzic">
+      <span class="dot"></span>
+    </div>
     <script src="../js/main.js"></script>
     <script src="../js/novost1.js"></script>
   </body>
