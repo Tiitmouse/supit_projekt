@@ -47,4 +47,11 @@
     position: fixed;
     bottom: 1.4rem;
     right: 1.4rem;
+    padding: 1rem;
   } 
+
+  #kruzic>img{
+    width: 100%;
+    height: 100%;
+    
+  }
