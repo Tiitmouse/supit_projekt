@@ -243,10 +243,16 @@ img.hover-shadow {
 /* TODO vjv postoji puno bolji nacin nego negativni margin i fix center position*/
 .videoPosition {
   margin-top: -12rem;
-  margin-left: 35%;
+  display: flex;
   border-radius: 3rem;
 }
 /* bonus */
+.videoPosition > video {
+  margin: auto;
+  border-radius: 1rem;
+  width: 400px;
+
+}
 
 .novostiSlika {
   max-width: 100%;
@@ -275,4 +281,3 @@ img.hover-shadow {
     width: 60%;
   }
 }
-

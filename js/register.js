@@ -31,7 +31,6 @@
       result
         .json()
         .then(({isSuccess, errorMessages }) => {
-          debugger;
           if(isSuccess) {
             alert("Registration successful");
             location.replace("../html/prijava.html");
