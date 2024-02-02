@@ -15,6 +15,7 @@
 
     document.body.append(kontaktButton);
 
+    //TODO modal scaling na manjim ekranima
     const modalElement = document.createElement('div');
     modalElement.id = "kontaktModal";
     modalElement.className = "modal fade";
