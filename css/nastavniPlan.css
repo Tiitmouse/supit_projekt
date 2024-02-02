@@ -1,81 +1,97 @@
 h1 {
-  margin-top: 5rem;
-  text-align: center;
+    margin-top: 5rem;
+    text-align: center;
 }
 
 hr {
-  width: 70%;
-  margin: auto;
-  margin-bottom: 2rem;
-  border-width: 4px;
-  border-color: #c3eded;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 2rem;
+    border-width: 4px;
+    border-color: var(--secondary-accent-color);;
+}
+
+.autocomplete-active {
+    background: var(--secondary-color);
+    padding: 0.3rem;
+    border-radius: 1.5rem;
 }
 
 .nastavniPlanContent {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .faintInputText {
-  opacity: 0.4;
+    opacity: 0.4;
 }
 
 .searchBar {
-  display: flex;
-  gap: 1rem;
-  max-width: 20rem;
+    display: flex;
+    gap: 1rem;
+    max-width: 20rem;
 }
 
 .kolegijTable {
-  width: 40rem;
-  overflow: hidden;
-  border-radius: 1.5rem;
+    width: 40rem;
+    overflow: hidden;
+    border-radius: 1.5rem;
 }
+
 #floatingInputautocomplete-list {
-  padding: 1rem;
-  background: var(--secondary-accent-color);
-  position: absolute;
-  border-radius: 1.5rem;
+    padding: 1rem;
+    background: var(--secondary-accent-color);
+    position: absolute;
+    border-radius: 1.5rem;
 }
 
 table.ForestTable {
-  width: 100%;
-  text-align: center;
-  border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
 }
+
 table.ForestTable td,
 table.ForestTable th {
-  padding: 2px 6px;
+    padding: 2px 6px;
 }
-table.ForestTable > tr >  td {
-  font-size: 20px;
-  color: #ffffff;
+
+table.ForestTable >tbody> tr > td {
+    font-size: 20px;
+    color: #ffffff;
 }
+
 table.ForestTable thead {
-  background: #afdcdd;
-  border-bottom: 3px solid #3f828e;
+    background: #afdcdd;
+    border-bottom: 3px solid #3f828e;
 }
+
 table.ForestTable thead th {
-  font-size: 20px;
-  font-weight: bold;
-  color: #3f828e;
-  text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3f828e;
+    text-align: center;
 }
+
 table.ForestTable tfoot {
-  font-size: 20px;
-  font-weight: bold;
-  color: #3f828e;
-  background: #afdcdd;
-  border-top: 3px solid #3f828e;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3f828e;
+    background: #afdcdd;
+    border-top: 3px solid #3f828e;
 }
+
 table.ForestTable tfoot td {
-  font-size: 20px;
+    font-size: 20px;
+}
+/*GUMB*/
+#DodajButton{
+    margin-top: 0;
 }
 
 @media (max-width: 1024px) {
-  .nastavniPlanContent {
-    flex-direction: column; 
-  }
+    .nastavniPlanContent {
+        flex-direction: column;
+    }
 }

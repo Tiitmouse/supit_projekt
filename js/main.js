@@ -1,6 +1,7 @@
 const logout = () => {
   if (sessionStorage.getItem("token")) {
     sessionStorage.removeItem("token");
+    sessionStorage.removeItem("username");
     location.reload();
   } else {
     alert("How the duck even?");

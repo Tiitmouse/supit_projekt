@@ -44,6 +44,7 @@ html::-webkit-scrollbar {
 
 .text-box>div:nth-child(odd){
     background: var(--primary-color);
+    color: white;
 }
 .onText{
     scroll-snap-align: start;
