@@ -1,5 +1,5 @@
 (async () => {
-
+//TODO napraviti request za jedan kolegij
     function autocomplete(inp, arr) {
         let currentFocus;
         inp.addEventListener("input", function (e) {
