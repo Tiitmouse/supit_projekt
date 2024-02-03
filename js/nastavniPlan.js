@@ -17,7 +17,7 @@
             a.setAttribute("class", "autocomplete-items");
             this.parentNode.appendChild(a);
             for (i = 0; i < arr.length; i++) {
-                if (arr[i].kolegij.substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                if (arr[i].kolegij.substr(0, val.length).toUpperCase() === val.toUpperCase()) {
                     b = document.createElement("DIV");
                     b.innerHTML =
                         "<strong>" + arr[i].kolegij.substr(0, val.length) + "</strong>";
@@ -45,9 +45,9 @@
                 if (currentFocus > -1) {
                     if (x) {
                         x[currentFocus].click();
-                        addKolegij();
                     }
                 }
+                findKolegij();
             }
         });
 
@@ -79,25 +79,44 @@
         });
     }
 
-    const getEveryKolegij = async () => {
-        const response = fetch(
-            "https://www.fulek.com/data/api/supit/curriculum-list/hr",
-            {
-                method: "GET",
-                headers: {
-                    Authorization: `Bearer ${sessionStorage.getItem("token")}`,
-                    "Content-Type": "application/json",
-                },
+    const getEveryKolegij = () => {
+        return $.ajax({
+            url: "https://www.fulek.com/data/api/supit/curriculum-list/hr",
+            method: "GET",
+            headers: {
+                Authorization: `Bearer ${sessionStorage.getItem("token")}`,
+                "Content-Type": "application/json",
+            },
+            statusCode: {
+                401: () => {
+                    location.replace("../index.html");
+                }
             }
-        );
-        const result = await response;
-        if (result.status === 401) location.replace("../index.html");
-        const dataJson = await result.json();
-        return dataJson.data;
+        }).then(result => {
+            return result.data;
+        });
     };
 
-    const deleteKolegij = (event) => {
-        event.currentTarget.parentElement.parentElement.remove();
+    const getKolegijById = (id) => {
+        return $.ajax({
+            url: `https://www.fulek.com/data/api/supit/get-curriculum/${id}`,
+            method: "GET",
+            headers: {
+                Authorization: `Bearer ${sessionStorage.getItem("token")}`,
+                "Content-Type": "application/json",
+            },
+            statusCode: {
+                401: function () {
+                    location.replace("../index.html");
+                }
+            }
+        }).then(result => {
+            return result.data;
+        });
+    };
+
+    const deleteKolegij = (e) => {
+        e.currentTarget.parentElement.parentElement.remove();
         calculateTotal();
     };
 
@@ -130,7 +149,36 @@
         <td></td>`;
     };
 
-    const createKolegijItem = (kolegij) => {
+    function storeKolegijToSessionStorage(kolegij) {
+        const kolegijJson = JSON.stringify(kolegij);
+        sessionStorage.setItem(`kolegij-${kolegij.id}`, kolegijJson);
+    }
+
+    function getKolegijFromSessionStorage(id) {
+        const kolegijJson = sessionStorage.getItem(`kolegij-${id}`);
+        if (kolegijJson) {
+            return JSON.parse(kolegijJson);
+        }
+        return undefined;
+    }
+
+    async function showKolegijDetails() {
+        const kolegijId = this.id;
+        let kolegij = getKolegijFromSessionStorage(kolegijId);
+        if (!kolegij) {
+            kolegij = await getKolegijById(kolegijId).then(kolegij => {
+                return kolegij;
+            });
+            storeKolegijToSessionStorage(kolegij);
+        }
+        console.log(kolegij);
+    }
+
+    function hideKolegijDetails() {
+        console.log("hide");
+    }
+
+    const getKolegijElement = (kolegij) => {
         const item = document.createElement("tr");
         item.id = kolegij.id;
         item.innerHTML = `
@@ -142,39 +190,48 @@
         <td>${kolegij.tip}</td>
         <td>
             <button class="btn bg-danger">
-            delete
+            Obriši
             </button>
         </td>`;
-        item.children[6].children[0].addEventListener("click", deleteKolegij);
+        item.querySelector('button').addEventListener('click', deleteKolegij);
+        $(item).hover(showKolegijDetails, hideKolegijDetails);
+
         return item;
     };
 
-    const kolegiji = await getEveryKolegij();
+    const sviKolegiji = await getEveryKolegij();
 
-    autocomplete(document.getElementById("floatingInput"), kolegiji);
+    autocomplete(document.getElementById("floatingInput"), sviKolegiji);
 
-    const addKolegij = () => {
-        const value = document.getElementById("floatingInput").value;
-        if (!value) {
-            alert("Error");
+    const findKolegij = () => {
+        const kolegiName = document.getElementById("floatingInput").value;
+        const kolegij = sviKolegiji.find(k => k.kolegij.toLowerCase() === kolegiName.toLowerCase());
+        if (!kolegij) {
+            alert(`Ne možemo pronaci kolegij ${kolegiName}`);
             return;
         }
-        const lista = document.querySelector("#content");
-        if (kolegiji.length === 0) return;
-        const kolegij = kolegiji.find((kolegij) => kolegij.kolegij === value);
-        if (!kolegij) alert(`Kolegij ${value} ne postoji`);
-        for (let i = 0; i < lista.children.length; i++) {
-            if (lista.children[i].id == kolegij.id) {
-                alert("Kolegij je već dodan");
-                return;
-            }
+
+        try {
+            addKolegij(kolegij);
+        } catch (e) {
+            alert(e.message)
+        } finally {
+            document.getElementById("floatingInput").value = "";
+            calculateTotal();
         }
-        lista.append(createKolegijItem(kolegij));
-        document.getElementById("floatingInput").value = "";
-        calculateTotal();
+    }
+
+    const addKolegij = (kolegij) => {
+        const listaElemenata = document.getElementById("content");
+        const listaKolegija = [...listaElemenata.children];
+        if (listaKolegija.some(k => k.id === kolegij.id.toString())) {
+            throw new Error("Kolegij već postoji");
+        } else {
+            listaElemenata.append(getKolegijElement(kolegij));
+        }
     };
 
     document.querySelector("#DodajButton")
-        .addEventListener("click", addKolegij);
+        .addEventListener("click", findKolegij);
 
 })();
