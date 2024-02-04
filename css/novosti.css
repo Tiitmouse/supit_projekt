@@ -12,7 +12,7 @@
 }
 
 .sizing {
-    height: 20rem;
+    height: 320px;
     width: 390px;
 }
 
@@ -71,12 +71,19 @@
     width: 50%;
 }
 
-.container:hover .image {
+.novostItem:hover .image {
     opacity: 0.3;
 }
 
-.container:hover .middle {
+.novostItem:hover .middle {
     opacity: 1;
+}
+
+.hover-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .text {
@@ -151,9 +158,8 @@
     }
 
     .sizing {
-        /*height: 20rem;*/
-        /*width: 390px;*/
-        scale: 0.8;
+        height: 262px;
+        width: 320px;
     }
 
     .middlel,
