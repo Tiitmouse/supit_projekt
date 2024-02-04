@@ -1,260 +1,164 @@
-
 /* image shape thingy  */
 .leftImg {
-  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
-  height: 20rem;
-  width: 390px;
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
 }
+
 .middleImg {
-  clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0% 50%, 25% 0%);
-  height: 20rem;
-  width: 390;
+    clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0% 50%, 25% 0%);
 }
+
 .rightImg {
-  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
-  height: 20rem;
-  width: 390px;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
 }
+
+.sizing {
+    height: 20rem;
+    width: 390px;
+}
+
 .novostList {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 13%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 13%;
+    gap: 2rem;
 }
+
 .back-arrow {
-  padding: 0 1rem;
-  position: absolute;
-  text-decoration: none;
-  left: 0px;
-  color: var(--secondary-accent-color);
-  text-decoration: none;
+    padding: 0 1rem;
+    position: absolute;
+    text-decoration: none;
+    left: 0;
+    color: var(--secondary-accent-color);
 }
+
 .novost h2 {
-  margin-left: 2.5rem;
+    margin-left: 2.5rem;
 }
 
 .novost p {
-  margin: 2rem;
-  padding: 1rem;
-  background-color: var(--secondary-color);
-  border-radius: 2rem;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    border-radius: 2rem;
 }
 
 /* img effect stuff */
-.container {
-  position: relative;
-  width: auto;
-}
 
 .image {
-  opacity: 1;
-  display: block;
-  transition: 0.5s ease;
-  backface-visibility: hidden;
+    opacity: 1;
+    display: block;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
 }
 
 .middle {
-  transition: 0.5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
+    transition: 0.5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
 }
+
 .middlel {
-  left: 40%;
+    left: 40%;
 }
+
 .middler {
-  left: 60%;
-  width: 50%;
+    left: 60%;
+    width: 50%;
 }
 
 .container:hover .image {
-  opacity: 0.3;
+    opacity: 0.3;
 }
 
 .container:hover .middle {
-  opacity: 1;
+    opacity: 1;
 }
 
 .text {
-  background-color: var(--secondary-accent-color);
-  color: rgb(0, 0, 0);
-  font-size: 16px;
-  padding: 16px 32px;
-  border-radius: 2rem;
+    background-color: var(--secondary-accent-color);
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    padding: 16px 32px;
+    border-radius: 2rem;
 }
+
 /* img effect stuff */
 
-/* gallery stuff */
-.row > .column {
-  padding: 0 8px;
+/*individual novost thing*/
+.novost {
+    padding: 2rem;
+    margin: auto;
+    max-width: 1800px;
 }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+/*individual novost thing*/
 
-/* Create four equal columns that floats next to eachother */
-.column {
-  float: left;
-  width: 25%;
-}
-
-/*!* Modal Content *!*/
-/*.modal-content {*/
-/*  position: relative;*/
-/*  background-color: #fefefe;*/
-/*  margin: auto;*/
-/*  padding: 0;*/
-/*  width: 90%;*/
-/*  max-width: 1200px;*/
-/*}*/
-
-/*!* The Close Button *!*/
-/*.close {*/
-/*  color: white;*/
-/*  position: absolute;*/
-/*  top: 10px;*/
-/*  right: 25px;*/
-/*  font-size: 35px;*/
-/*  font-weight: bold;*/
-/*}*/
-
-.close:hover,
-.close:focus {
-  color: #999;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* Hide the slides by default */
-.mySlides {
-  display: none;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* Caption text */
-.caption-container {
-  text-align: center;
-  background-color: black;
-  padding: 2px 16px;
-  color: white;
-}
-
-img.demo {
-  opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
-}
-
-img.hover-shadow {
-  transition: 0.3s;
-  border-radius: 3rem;
-}
-
-.hover-shadow:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.galleryimg {
-  width: 100%;
-  height: auto;
-}
-
-/* gallery stuff */
+/*galerry stuff insert*/
 
 /* bonus */
 .previewImg {
-  margin-left: 2%;
-  margin-right: 13%;
-  margin-top: -12rem;
-  scale: 0.3;
-  border-radius: 2rem;
+    margin-left: 2%;
+    margin-right: 13%;
+    margin-top: -12rem;
+    scale: 0.3;
+    border-radius: 2rem;
 }
+
 /* TODO vjv postoji puno bolji nacin nego negativni margin i fix center position*/
 .videoPosition {
-  margin-top: -12rem;
-  display: flex;
-  border-radius: 3rem;
+    margin-top: -12rem;
+    display: flex;
+    border-radius: 3rem;
 }
+
 /* bonus */
 .videoPosition > video {
-  margin: auto;
-  border-radius: 1rem;
-  width: 400px;
-
+    margin: auto;
+    border-radius: 1rem;
+    width: 400px;
 }
 
 .novostiSlika {
-  max-width: 100%;
-  overflow-x: hidden;
-  scale: 0.95;
-  border-radius: 2rem;
-  /* TODO fix this for phone*/
+    max-width: 100%;
+    overflow-x: hidden;
+    border-radius: 2rem;
 }
 
 @media (max-width: 1215px) {
-  .novostList {
-    flex-direction: column;
-  }
-  .leftImg {
-    clip-path: polygon(100% 25%, 100% 100%, 50% 75%, 0 100%, 0 25%, 50% 0);
-  }
-  .middleImg {
-    clip-path: polygon(100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%, 50% 0);
-  }
-  .rightImg {
-    clip-path: polygon(100% 0%, 100% 75%, 50% 100%, 0 75%, 0 0, 50% 25%);
-  }
-  .middlel,
-  .middler {
-    left: 50%;
-    width: 60%;
-  }
+    .novostList {
+        flex-direction: column;
+    }
+
+    .novostItem {
+        margin: auto;
+    }
+
+    .leftImg {
+        clip-path: polygon(100% 25%, 100% 100%, 50% 75%, 0 100%, 0 25%, 50% 0);
+    }
+
+    .middleImg {
+        clip-path: polygon(100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%, 50% 0);
+    }
+
+    .rightImg {
+        clip-path: polygon(100% 0%, 100% 75%, 50% 100%, 0 75%, 0 0, 50% 25%);
+    }
+
+    .sizing {
+        /*height: 20rem;*/
+        /*width: 390px;*/
+        scale: 0.8;
+    }
+
+    .middlel,
+    .middler {
+        left: 50%;
+        width: 60%;
+    }
 }
