@@ -52,11 +52,12 @@
         </div>
     </div>
 </nav>
+
 <h2>
     <a class="back-arrow" href="novosti.html"> &#10094; </a>
 </h2>
 
-<div class="novost">
+<main class="novost">
     <h2>WorldSkills Kazan 2019</h2>
     <p>
         Nakon godinu dana priprema za natjecanje WorldSkills Kazan 2019 na kojem
@@ -72,62 +73,62 @@
         i mentoru voditelju katedre za programsko inženjerstvo - Goranu Đambiću
         na osvojenom 16.mjestu u vještini IT Software Solutions for Business.
     </p>
-</div>
+    <div class="row">
+        <div class="column previewImg">
+            <img
+                    src="../materijali/img/galerija1.jpg"
+                    onclick="openModal();currentSlide(1)"
+                    class="hover-shadow"
+                    alt="galerija1"
+            />
+        </div>
+        <div class="column previewImg">
+            <img
+                    src="../materijali/img/galerija2.jpg"
+                    onclick="openModal();currentSlide(2)"
+                    class="hover-shadow"
+                    alt="galerija2"
+            />
+        </div>
+    </div>
+</main>
 
 <!-- gallery stuff -->
 <!-- Images used to open the lightbox -->
-<div class="row">
-    <div class="column previewImg">
-        <img
-                src="../materijali/img/galerija1.jpg"
-                onclick="openModal();currentSlide(1)"
-                class="hover-shadow"
-                alt="galerija1"
-        />
-    </div>
-    <div class="column previewImg">
-        <img
-                src="../materijali/img/galerija2.jpg"
-                onclick="openModal();currentSlide(2)"
-                class="hover-shadow"
-                alt="galerija2"
-        />
-      </div>
-    </div>
 
-    <!-- The Modal/Lightbox -->
-    <div id="myModal" class="modal">
-        <span class="close cursor" onclick="closeModal()">&times;</span>
-        <div class="modal-content">
-            <div class="mySlides">
-                <div class="numbertext">1 / 2</div>
-                <img class="galleryimg" src="../materijali/img/galerija1.jpg" alt="galerija1"/>
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">2 / 2</div>
-                <img class="galleryimg" src="../materijali/img/galerija2.jpg" alt="galerija2"/>
-            </div>
-
-            <!-- Next/previous controls -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+        <div class="mySlides">
+            <div class="numbertext">1 / 2</div>
+            <img class="galleryimg" src="../materijali/img/galerija1.jpg" alt="galerija1"/>
         </div>
+
+        <div class="mySlides">
+            <div class="numbertext">2 / 2</div>
+            <img class="galleryimg" src="../materijali/img/galerija2.jpg" alt="galerija2"/>
+        </div>
+
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-    <!-- gallery stuff -->
-    <div class="video videoPosition">
-        <video controls>
-            <source src="../materijali/video/worldskills.mp4" type="video/mp4"/>
-            Video can't be loaded for some reason :( and I don't know why :( it is a
-            mystery :( seems like it is not a video file :(
-        </video>
-    </div>
-    <!-- kontakt kruzic -->
-    <div id="kruzic">
-        <span class="dot"></span>
-    </div>
-    <script src="../js/main.js"></script>
-    <script src="../js/galerija.js"></script>
-    <script src="../js/kontakt.js"></script>
+</div>
+<!-- gallery stuff -->
+<div class="video videoPosition">
+    <video controls>
+        <source src="../materijali/video/worldskills.mp4" type="video/mp4"/>
+        Video can't be loaded for some reason :( and I don't know why :( it is a
+        mystery :( seems like it is not a video file :(
+    </video>
+</div>
+<!-- kontakt kruzic -->
+<div id="kruzic">
+    <span class="dot"></span>
+</div>
+<script src="../js/main.js"></script>
+<script src="../js/galerija.js"></script>
+<script src="../js/kontakt.js"></script>
 </body>
 </html>

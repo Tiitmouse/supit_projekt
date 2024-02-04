@@ -28,30 +28,52 @@
 html,
 body {
     background-color: var(--primary-color);
-}
-
-.logo {
-    width: 2.5rem;
-    height: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 footer {
+    margin-top: auto;
     height: 15rem;
     width: 100%;
     overflow: hidden;
-    position: relative;
     text-align: center;
     color: white;
 }
 
+footer img {
+    min-width: 100%;
+    min-height: 100%;
+}
+
 footer p {
     font-size: 3rem;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+    text-align: center;
+}
+
+.centered-text {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+    text-align: center;
 }
 
 a {
     text-decoration: none;
 }
 
+.logo {
+    width: 2.5rem;
+    height: 2.5rem;
+}
 
 .round-border {
     border-radius: 5rem;
@@ -135,14 +157,7 @@ nav {
 
 }
 
-.centered-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: max-content;
-    text-align: center;
-}
+
 
 .dot:hover {
     background-color: var(--primary-accent-color);
@@ -165,6 +180,10 @@ nav {
 @media (max-width: 991px) {
     nav {
         text-align: center;
+    }
+
+    footer p {
+        font-size: 5vw;
     }
 
     .logo {
