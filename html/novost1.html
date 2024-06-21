@@ -57,22 +57,25 @@
     <a class="back-arrow" href="novosti.html"> &#10094; </a>
 </h2>
 
-<main class="novost">
-    <h2>WorldSkills Kazan 2019</h2>
-    <p>
-        Nakon godinu dana priprema za natjecanje WorldSkills Kazan 2019 na kojem
-        je sudjelovalo 1300 natjecatelja iz cijelog svijeta, trud se itekako
-        isplatio. Josip, student 3. godine preddiplomskog studija sistemskog
-        inženjerstva osvojio je 12. mjesto u vještini IT Networks and System
-        Administration te osvojio medalju izvrsnosti! Čestitke Josipu ali i
-        njegovim/našim mentorima koji su ga pripremali za ovo natjecanje –
-        voditelju studija sistemskog inženjerstva Silviju Papiću, voditelju
-        katedre za operacijske sustave – Vedranu Dakiću i asistentu na studiju
-        sistemskog inženjerstva – Jasminu Redžepagiću. Čestitke i našem studentu
-        3.godine preddiplomskog studija programskog inženjerstva Josipu Horvatu
-        i mentoru voditelju katedre za programsko inženjerstvo - Goranu Đambiću
-        na osvojenom 16.mjestu u vještini IT Software Solutions for Business.
-    </p>
+<main >
+    <div class="novost">
+        <h2>WorldSkills Kazan 2019</h2>
+        <p>
+            Nakon godinu dana priprema za natjecanje WorldSkills Kazan 2019 na kojem
+            je sudjelovalo 1300 natjecatelja iz cijelog svijeta, trud se itekako
+            isplatio. Josip, student 3. godine preddiplomskog studija sistemskog
+            inženjerstva osvojio je 12. mjesto u vještini IT Networks and System
+            Administration te osvojio medalju izvrsnosti! Čestitke Josipu ali i
+            njegovim/našim mentorima koji su ga pripremali za ovo natjecanje –
+            voditelju studija sistemskog inženjerstva Silviju Papiću, voditelju
+            katedre za operacijske sustave – Vedranu Dakiću i asistentu na studiju
+            sistemskog inženjerstva – Jasminu Redžepagiću. Čestitke i našem studentu
+            3.godine preddiplomskog studija programskog inženjerstva Josipu Horvatu
+            i mentoru voditelju katedre za programsko inženjerstvo - Goranu Đambiću
+            na osvojenom 16.mjestu u vještini IT Software Solutions for Business.
+        </p>
+    </div>
+
     <div class="row">
         <div class="column previewImg">
             <img
@@ -90,24 +93,25 @@
                     alt="galerija2"
             />
         </div>
-    </div>
-</main>
+    </div> 
+
 
 <!-- gallery stuff -->
 <!-- Images used to open the lightbox -->
 
 <!-- The Modal/Lightbox -->
 <div id="myModal" class="modal">
-    <span class="close cursor" onclick="closeModal()">&times;</span>
     <div class="modal-content">
         <div class="mySlides">
-            <div class="numbertext">1 / 2</div>
+            <span class="close cursor" onclick="closeModal()">&times;</span>
             <img class="galleryimg" src="../materijali/img/galerija1.jpg" alt="galerija1"/>
+            <div class="numbertext">1 / 2</div>
         </div>
 
         <div class="mySlides">
-            <div class="numbertext">2 / 2</div>
+            <span class="close cursor" onclick="closeModal()">&times;</span>
             <img class="galleryimg" src="../materijali/img/galerija2.jpg" alt="galerija2"/>
+            <div class="numbertext">2 / 2</div>
         </div>
 
         <!-- Next/previous controls -->
@@ -116,6 +120,8 @@
     </div>
 </div>
 <!-- gallery stuff -->
+
+
 <div class="video videoPosition">
     <video controls>
         <source src="../materijali/video/worldskills.mp4" type="video/mp4"/>
@@ -123,10 +129,16 @@
         mystery :( seems like it is not a video file :(
     </video>
 </div>
+
+
 <!-- kontakt kruzic -->
 <div id="kruzic">
     <span class="dot"></span>
 </div>
+
+
+</main>
+
 <script src="../js/main.js"></script>
 <script src="../js/galerija.js"></script>
 <script src="../js/kontakt.js"></script>
