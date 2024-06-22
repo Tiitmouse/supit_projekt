@@ -92,8 +92,19 @@ table.ForestTable tfoot td {
     width: 108px;
 }
 
+
+
 @media (max-width: 1024px) {
     .nastavniPlanContent {
         flex-direction: column;
+    }
+    .nastavniPlanContent{
+        padding-left: 5%;
+        padding-right: 5%;
+        justify-content: center;
+    }
+    .kolegijTable {
+        width: 100%;
+        overflow-x: scroll;
     }
 }
