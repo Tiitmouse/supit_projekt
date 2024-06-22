@@ -76,40 +76,36 @@
         </p>
     </div>
 
-    <div class="row">
-        <div class="column previewImg">
+    <div class="row flex-container">
+
             <img
                     src="../materijali/img/galerija1.jpg"
                     onclick="openModal();currentSlide(1)"
-                    class="hover-shadow"
                     alt="galerija1"
             />
-        </div>
-        <div class="column previewImg">
+
             <img
                     src="../materijali/img/galerija2.jpg"
                     onclick="openModal();currentSlide(2)"
-                    class="hover-shadow"
                     alt="galerija2"
             />
-        </div>
+
     </div> 
 
 
 <!-- gallery stuff -->
-<!-- Images used to open the lightbox -->
 
 <!-- The Modal/Lightbox -->
-<div id="myModal" class="modal">
-    <div class="modal-content">
+<div id="gModal" class="modal galModal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content galModal-content">
         <div class="mySlides">
-            <span class="close cursor" onclick="closeModal()">&times;</span>
+            
             <img class="galleryimg" src="../materijali/img/galerija1.jpg" alt="galerija1"/>
             <div class="numbertext">1 / 2</div>
         </div>
 
         <div class="mySlides">
-            <span class="close cursor" onclick="closeModal()">&times;</span>
             <img class="galleryimg" src="../materijali/img/galerija2.jpg" alt="galerija2"/>
             <div class="numbertext">2 / 2</div>
         </div>
