@@ -67,7 +67,7 @@ footer.onText {
     padding: 0;
 }
 
-/* TODO check if good with sth  */
+
 @media (min-width: 960px) {
     .onText {
         font-size: x-large;

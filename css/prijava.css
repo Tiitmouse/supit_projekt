@@ -1,17 +1,18 @@
 .prijava{
     max-width : 35rem;
+    width: 100%;
     margin: auto;
     margin-top: 10rem;
     background: var(--secondary-color);
-    padding: 8rem 4rem;
+    padding: 4rem 4rem;
+    border-radius: 2rem;
 }
 
 @media (max-width:576px) {
     .prijava{
         padding: 2rem 1rem;
+        margin: auto;
         border-radius: 2.5rem;
-        margin-left: 3%;
-        margin-right: 3%;
     } 
 }
 
