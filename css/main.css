@@ -201,4 +201,10 @@ nav {
     #prijavaStatus {
         flex-direction: column-reverse;
     }
+
+    .kontaktform {
+        padding: 2rem 1rem;
+        margin: auto;
+        border-radius: 2.5rem;
+    }
 }
