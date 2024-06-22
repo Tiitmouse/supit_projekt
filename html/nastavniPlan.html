@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../css/main.css"/>
     <link rel="stylesheet" href="../css/nastavniPlan.css"/>
 </head>
-<!-- TODO Smaniti tablicu na mobitelu da se cijela vidi -->
 <body>
 <nav class="navbar navbar-expand-lg round-border sticky-top">
     <div class="container-fluid">
@@ -51,6 +50,7 @@
         </div>
     </div>
 </nav>
+<div id="tooltip" style="display: none; position: absolute; z-index: 1000;">Tooltip Content</div>
 <div>
     <h1>Nastavni plan</h1>
     <hr/>
@@ -72,6 +72,7 @@
         </button>
     </div>
     <div class="kolegijTable ">
+       
         <table id="kolegijTable" class="ForestTable">
             <thead>
             <tr>

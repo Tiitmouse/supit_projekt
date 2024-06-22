@@ -115,10 +115,14 @@
         });
     };
 
-    const deleteKolegij = (e) => {
-        e.currentTarget.parentElement.parentElement.remove();
-        calculateTotal();
-    };
+
+        const deleteKolegij = (e) => {
+            e.currentTarget.parentElement.parentElement.remove();
+            calculateTotal();
+            const tooltip = document.getElementById('tooltip');
+            tooltip.style.display = 'none';
+        };
+
 
     const calculateTotal = () => {
         const vrijednosti = document.getElementById("content").children;
@@ -171,11 +175,14 @@
             });
             storeKolegijToSessionStorage(kolegij);
         }
-        console.log(kolegij);
+        const tooltip = document.getElementById('tooltip');
+        tooltip.innerHTML = `Kolegij: ${kolegij.kolegij}<br>ECTS: ${kolegij.ects}<br>Sati:   ${kolegij.sati}<br>Predavanja: ${kolegij.predavanja}<br>Vježbe: ${kolegij.vjezbe}`;
     }
 
+
     function hideKolegijDetails() {
-        console.log("hide");
+        const tooltip = document.getElementById('tooltip');
+        tooltip.innerHTML = '';
     }
 
     const getKolegijElement = (kolegij) => {
@@ -195,6 +202,16 @@
         </td>`;
         item.querySelector('button').addEventListener('click', deleteKolegij);
         $(item).hover(showKolegijDetails, hideKolegijDetails);
+
+        item.addEventListener('mouseenter', async function(event) {
+            await showKolegijDetails.call(this); // Use call to set 'this' correctly
+            document.getElementById('tooltip').style.display = 'block';
+            document.getElementById('tooltip').style.left = `${event.pageX}px`;
+            document.getElementById('tooltip').style.top = `${event.pageY}px`;
+        });
+        item.addEventListener('mouseleave', function() {
+            document.getElementById('tooltip').style.display = 'none';
+        });
 
         return item;
     };

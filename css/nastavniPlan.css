@@ -92,6 +92,14 @@ table.ForestTable tfoot td {
     width: 108px;
 }
 
+#tooltip {
+    background-color: #f9f9f9;
+    border: 1px solid #d3d3d3;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: black;
+}
 
 
 @media (max-width: 1024px) {
