@@ -20,9 +20,8 @@
                 if (arr[i].kolegij.substr(0, val.length).toUpperCase() === val.toUpperCase()) {
                     b = document.createElement("DIV");
                     b.innerHTML =
-                        "<strong>" + arr[i].kolegij.substr(0, val.length) + "</strong>";
-                    b.innerHTML += arr[i].kolegij.substr(val.length);
-                    b.innerHTML += "<input type='hidden' value='" + arr[i].kolegij + "'>";
+                        `<strong>${arr[i].kolegij.substr(0, val.length)}</strong>${arr[i].kolegij.substr(val.length)}<input type='hidden'value='${arr[i].kolegij}'>`;
+                        
                     b.addEventListener("click", function (e) {
                         inp.value = this.getElementsByTagName("input")[0].value;
                         closeAllLists();
@@ -66,11 +65,11 @@
         }
 
         function closeAllLists(elmnt) {
-            let x = document.getElementsByClassName("autocomplete-items");
-            for (let i = 0; i < x.length; i++) {
-                if (elmnt != x[i] && elmnt != inp) {
-                    x[i].parentNode.removeChild(x[i]);
-                }
+            const autocompleteItems = document.getElementsByClassName("autocomplete-items");
+            for (let i = 0; i < autocompleteItems.length; i++) {
+            if (elmnt !== autocompleteItems[i] && elmnt !== inp) {
+                autocompleteItems[i].parentNode.removeChild(autocompleteItems[i]);
+            }
             }
         }
 
@@ -127,28 +126,25 @@
     const calculateTotal = () => {
         const vrijednosti = document.getElementById("content").children;
 
-        const footerValues = {
-            ects: 0,
-            sati: 0,
-            predavanja: 0,
-            vjezbe: 0,
-        }
+        let totalEcts = 0;
+        let totalSati = 0;
+        let totalPredavanja = 0;
+        let totalVjezbe = 0;
+
         for (let i = 0; i < vrijednosti.length; i++) {
-
-            footerValues.ects += Number(vrijednosti[i].children[1].innerText);
-            footerValues.sati += Number(vrijednosti[i].children[2].innerText);
-            footerValues.predavanja += Number(vrijednosti[i].children[3].innerText);
-            footerValues.vjezbe += Number(vrijednosti[i].children[4].innerText);
-
+            totalEcts += Number(vrijednosti[i].children[1].innerText);
+            totalSati += Number(vrijednosti[i].children[2].innerText);
+            totalPredavanja += Number(vrijednosti[i].children[3].innerText);
+            totalVjezbe += Number(vrijednosti[i].children[4].innerText);
         }
 
-        const footer = document.getElementById("footer")
+        const footer = document.getElementById("footer");
         footer.innerHTML = `
         <td>Ukupno</td>
-        <td>${footerValues.ects}</td>
-        <td>${footerValues.sati}</td>
-        <td>${footerValues.predavanja}</td>
-        <td>${footerValues.vjezbe}</td>
+        <td>${totalEcts}</td>
+        <td>${totalSati}</td>
+        <td>${totalPredavanja}</td>
+        <td>${totalVjezbe}</td>
         <td></td>
         <td></td>`;
     };
@@ -216,13 +212,13 @@
         return item;
     };
 
-    const sviKolegiji = await getEveryKolegij();
 
-    autocomplete(document.getElementById("floatingInput"), sviKolegiji);
+    autocomplete(document.getElementById("floatingInput"), await getEveryKolegij());
 
-    const findKolegij = () => {
+    async function findKolegij  () {
         const kolegiName = document.getElementById("floatingInput").value;
-        const kolegij = sviKolegiji.find(k => k.kolegij.toLowerCase() === kolegiName.toLowerCase());
+        const list = await getEveryKolegij();
+        const kolegij = list.find(k => k.kolegij.toLowerCase() === kolegiName.toLowerCase());
         if (!kolegij) {
             alert(`Ne možemo pronaci kolegij ${kolegiName}`);
             return;
