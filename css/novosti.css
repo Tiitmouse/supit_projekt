@@ -1,6 +1,7 @@
 /* image shape thingy  */
 .leftImg {
     clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    /* clip-path: circle(40% at 50% 50%); */
 }
 
 .middleImg {
