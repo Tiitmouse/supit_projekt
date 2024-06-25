@@ -1,5 +1,4 @@
 (async () => {
-//TODO napraviti request za jedan kolegij
     function autocomplete(inp, arr) {
         let currentFocus;
         inp.addEventListener("input", function (e) {
@@ -21,7 +20,7 @@
                     b = document.createElement("DIV");
                     b.innerHTML =
                         `<strong>${arr[i].kolegij.substr(0, val.length)}</strong>${arr[i].kolegij.substr(val.length)}<input type='hidden'value='${arr[i].kolegij}'>`;
-                        
+
                     b.addEventListener("click", function (e) {
                         inp.value = this.getElementsByTagName("input")[0].value;
                         closeAllLists();
@@ -114,7 +113,6 @@
         });
     };
 
-
         const deleteKolegij = (e) => {
             e.currentTarget.parentElement.parentElement.remove();
             calculateTotal();
@@ -172,7 +170,8 @@
             storeKolegijToSessionStorage(kolegij);
         }
         const tooltip = document.getElementById('tooltip');
-        tooltip.innerHTML = `Kolegij: ${kolegij.kolegij}<br>ECTS: ${kolegij.ects}<br>Sati:   ${kolegij.sati}<br>Predavanja: ${kolegij.predavanja}<br>Vježbe: ${kolegij.vjezbe}`;
+        tooltip.innerHTML = `Kolegij: ${kolegij.kolegij}<br>ECTS: ${kolegij.ects}<br>Sati:
+        ${kolegij.sati}<br>Predavanja: ${kolegij.predavanja}<br>Vježbe: ${kolegij.vjezbe}`;
     }
 
 
@@ -182,9 +181,9 @@
     }
 
     const getKolegijElement = (kolegij) => {
-        const item = document.createElement("tr");
-        item.id = kolegij.id;
-        item.innerHTML = `
+        const tableRow = document.createElement("tr");
+        tableRow.id = kolegij.id;
+        tableRow.innerHTML = `
         <td>${kolegij.kolegij}</td>
         <td>${kolegij.ects}</td>
         <td>${kolegij.sati}</td>
@@ -196,31 +195,31 @@
             Obriši
             </button>
         </td>`;
-        item.querySelector('button').addEventListener('click', deleteKolegij);
-        $(item).hover(showKolegijDetails, hideKolegijDetails);
+        tableRow.querySelector('button').addEventListener('click', deleteKolegij);
+        $(tableRow).hover(showKolegijDetails, hideKolegijDetails);
 
-        item.addEventListener('mouseenter', async function(event) {
-            await showKolegijDetails.call(this); // Use call to set 'this' correctly
-            document.getElementById('tooltip').style.display = 'block';
-            document.getElementById('tooltip').style.left = `${event.pageX}px`;
-            document.getElementById('tooltip').style.top = `${event.pageY}px`;
-        });
-        item.addEventListener('mouseleave', function() {
-            document.getElementById('tooltip').style.display = 'none';
-        });
+         tableRow.addEventListener('mouseenter', async function(event) {
+            await showKolegijDetails.call(this);
+             document.getElementById('tooltip').style.display = 'block';
+             document.getElementById('tooltip').style.left = `${event.pageX}px`;
+             document.getElementById('tooltip').style.top = `${event.pageY}px`;
+         });
+         tableRow.addEventListener('mouseleave', function() {
+             document.getElementById('tooltip').style.display = 'none';
+         });
 
-        return item;
+        return tableRow;
     };
 
 
     autocomplete(document.getElementById("floatingInput"), await getEveryKolegij());
 
     async function findKolegij  () {
-        const kolegiName = document.getElementById("floatingInput").value;
+        const kolegijName = document.getElementById("floatingInput").value;
         const list = await getEveryKolegij();
-        const kolegij = list.find(k => k.kolegij.toLowerCase() === kolegiName.toLowerCase());
+        const kolegij = list.find(k => k.kolegij.toLowerCase() === kolegijName.toLowerCase());
         if (!kolegij) {
-            alert(`Ne možemo pronaci kolegij ${kolegiName}`);
+            alert(`Ne možemo pronaci kolegij ${kolegijName}`);
             return;
         }
 

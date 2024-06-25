@@ -96,6 +96,7 @@
             </div>
         </div>`
 
+
     document.body.append(modalElement);
 
     const modal = new bootstrap.Modal("#kontaktModal", {});
