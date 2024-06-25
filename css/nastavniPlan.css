@@ -34,6 +34,7 @@ hr {
 }
 
 .kolegijTable {
+    display: none;
     width: 40rem;
     overflow: hidden;
     border-radius: 1.5rem;
